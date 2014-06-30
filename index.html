@@ -1,0 +1,280 @@
+<html class="no-js" lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas ng-controller="LoginController">
+        <div class="inner-wrap">
+            <nav class="tab-bar show-for-small">
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Foundation</h1>
+                </section>
+            </nav>
+            <nav class="top-bar hide-for-small" data-topbar>
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="index.html">Foundation</a></h1>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-dropdown">
+                            <a href="learn/features.html" class="">Learn</a>
+                            <ul class="dropdown">
+                                <li><a href="learn/features.html">Features</a>
+                                </li>
+                                <li><a href="learn/faq.html">FAQ</a>
+                                </li>
+                                <li><a href="learn/case-washington-post.html">Case Studies</a>
+                                </li>
+                                <li><a href="learn/website-examples.html">Website Examples</a>
+                                </li>
+                                <li><a href="learn/video-started-with-foundation.html">Videos</a>
+                                </li>
+                                <li><a href="learn/training.html">Training</a>
+                                </li>
+                                <li><a href="learn/about.html">About</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="has-dropdown">
+                            <a href="templates.html" class="">Develop</a>
+                            <ul class="dropdown">
+                                <li><a href="templates.html">Add-ons</a>
+                                </li>
+                                <li><a href="/docs">Docs</a>
+                                </li>
+                                <li><a href="develop/download.html">Download</a>
+                                </li>
+                                <li><a href="develop/contribute.html">Contribute</a>
+                                </li>
+                                <li><a href="develop/tools.html">Tools</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="has-dropdown">
+                            <a href="support/support.html" class="">Support</a>
+                            <ul class="dropdown">
+                                <li><a href="support/support.html">Support Channels</a>
+                                </li>
+                                <li><a href="/forum">Foundation Forum</a>
+                                </li>
+                                <li><a href="support/images-and-badges.html">Images &amp; Badges</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="has-dropdown">
+                            <a href="business/services.html" class="">Business</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/docs" class="">Docs</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="" ng-show="user">Hello {{user.name}}!</a>
+                            <a href="#" ng-hide="user" data-reveal-id="myModal" class="small button">Log in</a>
+                        </li>
+                        <li>
+                            <a href="" ng-show="user" ng-click="logout()" class="small button">Logout</a>
+                        </li>
+                </section>
+            </nav>
+
+            <div id="myModal" class="reveal-modal" data-reveal>
+                <h2>Please log in</h2>
+                <form data-abide>
+                    <div class="name-field">
+                        <label>Username
+                            <input type="text" name="users_name" ng-model="username">
+                        </label>
+                    </div>
+                    <div class="password-field">
+                        <label>Password
+                            <input type="password" id="password" ng-model="password">
+                        </label>
+                    </div>
+                    <button type="submit" ng-click="login()">Log in</button>
+                </form>
+                <a class="close-reveal-modal">&#215;</a>
+            </div>
+
+            <aside class="left-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="learn/features.html" class="">Learn</a>
+                        <ul class="dropdown">
+                            <li><a href="learn/features.html">Features</a>
+                            </li>
+                            <li><a href="learn/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="learn/case-washington-post.html">Case Studies</a>
+                            </li>
+                            <li><a href="learn/website-examples.html">Website Examples</a>
+                            </li>
+                            <li><a href="learn/video-started-with-foundation.html">Videos</a>
+                            </li>
+                            <li><a href="learn/training.html">Training</a>
+                            </li>
+                            <li><a href="learn/about.html">About</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="templates.html" class="">Develop</a>
+                        <ul class="dropdown">
+                            <li><a href="templates.html">Add-ons</a>
+                            </li>
+                            <li><a href="/docs">Docs</a>
+                            </li>
+                            <li><a href="develop/download.html">Download</a>
+                            </li>
+                            <li><a href="develop/contribute.html">Contribute</a>
+                            </li>
+                            <li><a href="develop/tools.html">Tools</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="support/support.html" class="">Support</a>
+                        <ul class="dropdown">
+                            <li><a href="support/support.html">Support Channels</a>
+                            </li>
+                            <li><a href="/forum">Foundation Forum</a>
+                            </li>
+                            <li><a href="support/images-and-badges.html">Images &amp; Badges</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="business/services.html" class="">Business</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="/docs" class="">Docs</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </aside>
+
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li class="divider"></li>
+                    <li class="has-form">
+                        <a href="" ng-show="user">Hello {{user.name}}!</a>
+                        <a href="#" ng-hide="user" data-reveal-id="myModal" class="small button">Log in</a>
+                    </li>
+                    <li>
+                        <a href="" ng-show="user" ng-click="logout()" class="small button">Logout</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </aside>
+
+            <section class="main-section row">
+				<ul class="tabs" data-tab>
+					<li class="tab-title active"><a href="#panel2-1">Tab 1</a></li>
+					<li class="tab-title"><a href="#panel2-2">Tab 2</a></li>
+					<li class="tab-title"><a href="#panel2-3">Tab 3</a></li>
+					<li class="tab-title"><a href="#panel2-4">Tab 4</a></li>
+				</ul>
+				<div class="tabs-content">
+					<div class="content active" id="panel2-1">
+                        <p>First panel content goes here...</p>
+                        <div ng-controller="TodoController">
+                            <h1>Deployd Todos</h1>
+                            <p id="empty" ng-hide="todos.length || !loaded">You don't have any todos! Add one now:</p>
+                            <ul id="todos" class="unstyled">
+                                <li ng-repeat="todo in todos">
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="todo.completed" ng-change="changeCompleted(todo)" />{{todo.title}}
+                                    </label>
+                                </li>
+                            </ul>
+                            <form class="form-inline">
+                                <input id="todo-title" type="text" ng-model="newTodoTitle" />
+                                <button id="add-btn" class="button success" ng-click="addTodo(newTodoTitle)">Add</button>
+                            </form>
+                            <p>
+                                <p>
+                                    <a href id="remove-completed-btn" ng-click="removeCompletedItems()">Remove completed items</a>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="content" id="panel2-2">
+                        <p>Second panel content goes here...</p>
+                    </div>
+                    <div class="content" id="panel2-3">
+                        <p>Third panel content goes here...</p>
+                    </div>
+                    <div class="content" id="panel2-4">
+                        <p>Fourth panel content goes here...</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="row">
+                <div class="large-12 columns">
+                    <hr/>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <p>&copy; Copyright no one at all. Go to town.</p>
+                        </div>
+                        <div class="large-6 columns">
+                            <ul class="inline-list right">
+                                <li><a href="#">Link 1</a>
+                                </li>
+                                <li><a href="#">Link 2</a>
+                                </li>
+                                <li><a href="#">Link 3</a>
+                                </li>
+                                <li><a href="#">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.offcanvas.js"></script>
+    <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="js/foundation/foundation.reveal.js"></script>
+    <script src="js/foundation/foundation.tab.js"></script>
+    <script type="text/javascript" src="http://ec2-54-179-38-224.ap-southeast-1.compute.amazonaws.com/socket.io/socket.io.js"></script>
+    <script src="js/todos.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
